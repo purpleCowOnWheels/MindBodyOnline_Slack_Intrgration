@@ -20,8 +20,6 @@ file    = open(basePath + r'/Credentials/' + slack_user + '.json')
 creds   = json.load(file)
 creds   = { k: decrypt(slack_pw.encode(), v).decode('utf-8') for k, v in creds.items() }
 
-# user    = 'rebecca.licht'
-# pw      = 'M@gicDr@g0n'
 api_key = "871010c7fe2c4d31ab68410c3d4b2ce3"
 site_id = "735015"
 conn    = http.client.HTTPSConnection("api.mindbodyonline.com")
